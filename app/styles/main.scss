@@ -1,0 +1,351 @@
+$icon-font-path: '../fonts/';
+
+// rem font mixin
+@mixin rem2px($property, $sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+@mixin border-radius($radius:.25em) {
+  border-radius: $radius;
+}
+
+/* VARIABLES */
+$lr : #202f55; // bleu LR
+$red : #fa4a4a; // rouge LR
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import url(https://fonts.googleapis.com/css?family=Coustard|Yanone+Kaffeesatz:400,300);
+@import 'cards';
+@import 'fullpage';
+
+/* Base css */
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  font-size: 62.5%;
+}
+*, *:after, *:before {
+  @include box-sizing(border-box);
+}
+// -webkit-transition: all 0.25s ease-in-out 0s;
+// -o-transition: all 0.25s ease-in-out 0s;
+// transition: all 0.25s ease-in-out 0s;
+
+body, html {
+  height: 100%;
+  background-color: $lr;
+}
+
+/* Template */
+
+.alert-ie {
+  background-color: #e20040;
+  color: #fff;
+  padding: 15px;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: underline;
+    &:hover {
+      color: #fff;    
+    }
+  }
+}
+.hero {
+    background-color: $lr;
+    background-image: url('../images/bg-hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  .hero__content {
+    color: #efefef;
+  }
+  .stick {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid white;
+    display: inline-block;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    width: initial;
+    padding: 5px 10px;
+    @include rem2px(font-size, 2.2);
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+    color: white;
+  }
+  h1 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 300;
+    @include rem2px(font-size, 13.7);
+    text-transform: uppercase;
+    text-shadow: 4px 2px 0 $red;
+    span {
+      display: block;
+      font-family: 'Coustard', serif;
+      @include rem2px(font-size, 6.1);
+    }
+  }
+  p {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 300;
+    @include rem2px(font-size, 3.3);
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 60px;
+    &:before, &:after {
+      content: ' ';
+      height: 3px;
+      background-color: #fa4a4a;
+      display: inherit;
+      position: relative;
+      top: -10px;
+      left: 0;
+      width: 70px;
+    }
+  }
+  .btn-show {
+    background: white;
+    @include border-radius(0);
+    border-bottom: 2px solid $red;
+    color: $red;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 400;
+    @include rem2px(font-size, 2.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    -o-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+    &:hover {
+      background-color: $red;
+      color: white;
+      border-color: transparent;
+      i {
+         -webkit-transform: translate3d(5px,0px,0);
+        transform: translate3d(5px,0px,0);
+      }
+    }
+    i {
+      -webkit-transition: all 0.25s ease-in-out 0s;
+      -o-transition: all 0.25s ease-in-out 0s;
+      transition: all 0.25s ease-in-out 0s;
+    }
+  }
+  .perso {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    // width: 40%;
+    display: none;
+  }
+}
+.panini__wrapper {
+  // height: 100vh;
+}
+.panini__body {
+  .content-resume {
+    margin-bottom: 20px;
+    .saison {
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      font-weight: 300;
+      font-size: 33px;
+      font-size: 3.3rem;
+      text-transform: uppercase;
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 20px;
+      &:before, &:after {
+        content: ' ';
+        height: 3px;
+        background-color: #fa4a4a;
+        display: inherit;
+        position: relative;
+        top: -10px;
+        left: 0;
+        width: 70px;
+      }
+    }
+  }
+  h4 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 300;
+    @include rem2px(font-size, 13.7);
+    text-transform: uppercase;
+    text-shadow: 4px 2px 0 $red;
+    color: white;
+    margin-top: 0;
+    span {
+      display: block;
+      font-family: 'Coustard', serif;
+      @include rem2px(font-size, 6.0);
+    }
+  }
+  p {
+    color: white;
+    @include rem2px(font-size, 1.4);
+  }
+  .tc_card {
+    .tc_inner_card {
+      -webkit-transition: all 0.25s ease-in-out 0s;
+      -o-transition: all 0.25s ease-in-out 0s;
+      transition: all 0.25s ease-in-out 0s;
+      &:hover {
+        -webkit-transform: translate3d(0,-5px,0);
+        transform: translate3d(0,-5px,0);
+      }
+    }
+    a {
+      img {
+        -webkit-transition: all 0.25s ease-in-out 0s;
+        -o-transition: all 0.25s ease-in-out 0s;
+        transition: all 0.25s ease-in-out 0s;
+      }
+    }
+    a:hover {
+      text-decoration: none;
+      img {
+        @include opacity(0.9);
+      }
+    }
+  }
+
+  .name_player {
+    padding: 0 0 0 50px;
+    background-image: url('../images/tshirt.png');
+    background-repeat: no-repeat;
+    h2 {
+     @include rem2px(font-size, 2.0);
+     color: $lr;
+     margin-bottom: 0;
+    }
+    p {
+      color: black;
+      @include rem2px(font-size, 1.6);
+    }
+  }
+  .more-thumbnails {
+    a {
+      display: block;
+      -webkit-transition: all 0.25s ease-in-out 0s;
+      -o-transition: all 0.25s ease-in-out 0s;
+      transition: all 0.25s ease-in-out 0s;
+      &:hover {
+        -webkit-transform: translate3d(0,5px,0);
+        transform: translate3d(0,5px,0);
+      }
+    }
+    i {
+      margin-top: 20px;
+      color: white;
+      @include rem2px(font-size, 2.2);
+    }
+  }
+}
+.tc_inner_modal {
+  h3 {
+    color: $red;
+    @include rem2px(font-size, 2.6);
+    font-weight: 600;
+    margin: 0 0 30px 0;
+  }
+  .content-tip {
+    .body-tip {
+      background-color: #fafafa;
+      padding: 15px;
+      border: 1px solid #cdcdcd;
+      width: 90%;
+      float: left;
+    }
+    .share-tip {
+      width: 10%;
+      float: left;
+      ul {
+        padding: 0;
+      }
+      li {
+        display: block;
+        a {
+          padding: 0;
+          display: inline-block;
+
+          -webkit-transition: all 0.25s ease-in-out 0s;
+          -o-transition: all 0.25s ease-in-out 0s;
+          transition: all 0.25s ease-in-out 0s;
+          &:hover {
+            @include opacity(0.8);
+          }
+        }
+      }
+    }
+  }  
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 426px) {
+  .hero {
+    .perso {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 426px) {
+  .panini__body {
+    h4 {
+      @include rem2px(font-size, 9.4);
+      span {
+        @include rem2px(font-size, 4.2);
+      }
+    }
+    .content-resume {
+      .saison {
+        &:before, &:after {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .hero {
+    .stick {
+      right: 40px;
+      left: initial;
+    }
+    h1 {
+      @include rem2px(font-size, 9.3);
+    }
+    h1 span {
+      @include rem2px(font-size, 4.3);
+    }
+    p:before, p:after {
+      width: 28px;
+    }
+  }
+  .panini__wrapper {
+    .content-resume > div {
+      text-align: center!important;
+      img {
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
