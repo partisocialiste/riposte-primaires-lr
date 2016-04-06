@@ -184,6 +184,20 @@ body, html {
         width: 70px;
       }
     }
+    .logo-gold {
+      background-image: url('../images/logo-lr-gold.png');
+      background-repeat: no-repeat;
+      height: 263px;
+      width: 197px;
+      margin: 0 auto;
+      -webkit-transition: all 0.2s ease-in-out 0s;
+      -o-transition: all 0.2s ease-in-out 0s;
+      transition: all 0.2s ease-in-out 0s;
+    }
+    
+    .logo-gold:hover {
+      background-image: url('../images/logo-lr-gold-2.png');
+    }
   }
   h4 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -193,6 +207,7 @@ body, html {
     text-shadow: 4px 2px 0 $red;
     color: white;
     margin-top: 0;
+    line-height: 90px;
     span {
       display: block;
       font-family: 'Coustard', serif;
@@ -209,8 +224,8 @@ body, html {
       -o-transition: all 0.25s ease-in-out 0s;
       transition: all 0.25s ease-in-out 0s;
       &:hover {
-        -webkit-transform: translate3d(0,-5px,0);
-        transform: translate3d(0,-5px,0);
+        -webkit-transform: translate3d(0,-10px,0);
+        transform: translate3d(0,-10px,0);
       }
     }
     a {
@@ -223,23 +238,19 @@ body, html {
     a:hover {
       text-decoration: none;
       img {
-        @include opacity(0.9);
+        @include opacity(0.5);
       }
     }
   }
-
   .name_player {
     padding: 0 0 0 50px;
     background-image: url('../images/tshirt.png');
     background-repeat: no-repeat;
+    height: 34px;
     h2 {
-     @include rem2px(font-size, 2.0);
+     @include rem2px(font-size, 1.9);
      color: $lr;
      margin-bottom: 0;
-    }
-    p {
-      color: black;
-      @include rem2px(font-size, 1.6);
     }
   }
   .more-thumbnails {
@@ -274,6 +285,13 @@ body, html {
       border: 1px solid #cdcdcd;
       width: 90%;
       float: left;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    .source-link {
+      padding: 0;
     }
     .share-tip {
       width: 10%;
@@ -310,6 +328,7 @@ body, html {
   .panini__body {
     h4 {
       @include rem2px(font-size, 9.4);
+          line-height: 1.1;
       span {
         @include rem2px(font-size, 4.2);
       }
