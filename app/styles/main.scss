@@ -193,10 +193,9 @@ body, html {
       -webkit-transition: all 0.2s ease-in-out 0s;
       -o-transition: all 0.2s ease-in-out 0s;
       transition: all 0.2s ease-in-out 0s;
-    }
-    
-    .logo-gold:hover {
-      background-image: url('../images/logo-lr-gold-2.png');
+      &:hover {
+        background-image: url('../images/logo-lr-gold-2.png');
+      }
     }
   }
   h4 {
@@ -339,14 +338,25 @@ body, html {
           width: 20px;
         }
       }
+      p {
+        margin-top: 40px;
+      }
+      .logo-gold {
+        margin-top: 40px;
+        margin-bottom: 20px;
+        &:hover {
+          background-image: url('../images/logo-lr-gold.png');
+        }
+      }
     }
   }
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .hero {
     .stick {
-      right: 40px;
+      right: 30px;
       left: initial;
+      top: 30px;
     }
     h1 {
       @include rem2px(font-size, 9.3);
