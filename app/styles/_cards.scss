@@ -208,9 +208,9 @@ body .tc_back {
 .tc_close {
   z-index: 110;
   position: absolute;
-  right: 10px;
-  top: 10px;
-  font-size: 24px;
+  right: 20px;
+  top: 20px;
+  @include rem2px(font-size, 3.2);
   font-weight: 600;
   line-height: 100%;
   color: $red;
