@@ -90,6 +90,12 @@ body, html {
     font-style: italic;
     color: white;
   }
+  .logo {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    max-width: 80px;
+  }
   h1 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-weight: 300;
@@ -316,7 +322,7 @@ body, html {
   }  
 }
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 992px) {
   .hero {
     .perso {
       display: block;
@@ -354,9 +360,12 @@ body, html {
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .hero {
     .stick {
-      right: 30px;
-      left: initial;
-      top: 30px;
+      left: 20px;
+      top: 20px;
+    }
+    .logo {
+     right: 20px;
+     top: 20px; 
     }
     h1 {
       @include rem2px(font-size, 9.3);
