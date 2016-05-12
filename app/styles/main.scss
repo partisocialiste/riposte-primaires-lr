@@ -15,6 +15,7 @@ $red : #fa4a4a; // rouge LR
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
 @import url(https://fonts.googleapis.com/css?family=Coustard|Yanone+Kaffeesatz:400,300);
@@ -43,7 +44,6 @@ body, html {
 }
 
 /* Template */
-
 .alert-ie {
   background-color: #e20040;
   color: #fff;
@@ -162,6 +162,30 @@ body, html {
     right: 40px;
     // width: 40%;
     display: none;
+  }
+  .btn-tools {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    i {
+      color: white;
+      @include rem2px(font-size, 2);
+      @include opacity(0.7);
+      -webkit-transition: all 0.25s ease-in-out 0s;
+      -o-transition: all 0.25s ease-in-out 0s;
+      transition: all 0.25s ease-in-out 0s;
+      &:hover {
+        @include opacity(1);
+      }
+    }
   }
 }
 .panini__wrapper {
@@ -367,11 +391,18 @@ body, html {
      right: 20px;
      top: 20px; 
     }
+    .btn-tools {
+     left: 20px;
+     bottom: 20px; 
+    }
     h1 {
       @include rem2px(font-size, 9.3);
     }
     h1 span {
       @include rem2px(font-size, 4.3);
+    }
+    p {
+      margin-bottom: 20px;
     }
     p:before, p:after {
       width: 28px;

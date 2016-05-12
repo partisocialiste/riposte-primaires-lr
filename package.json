@@ -39,5 +39,8 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "font-awesome": "^4.6.1"
   }
 }

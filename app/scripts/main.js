@@ -17,3 +17,20 @@ $('.tips').tip_cards({
   //hoverTilt: "up",
   cardFlyDirection: 'bottom'
 });
+
+// je déclare la fonction fullscreen
+function fullscreen(element) {
+   return (element.requestFullscreen ||
+      element.webkitRequestFullscreen ||
+      element.mozRequestFullScreen ||
+      element.msRequestFullscreen).call(element);
+}
+ 
+// je récupère le bouton grâce à son id que j'ai rajouté dans le code HTML
+var $bouton = document.getElementById('fullscreen')
+ 
+// j'attache le gestionnaire de click
+$bouton.addEventListener('click', function() {
+   // j'appelle la fonction fullscreen sur le <html>
+   fullscreen(document.documentElement);
+});

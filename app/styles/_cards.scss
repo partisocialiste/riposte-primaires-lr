@@ -223,7 +223,6 @@ body .tc_back {
     color: $lr;
   }
 }
-
 .tc_flip_toggle {
   z-index: 110;
   position: absolute;
@@ -233,21 +232,17 @@ body .tc_back {
   font-weight: 100;
   line-height: 100%;
 }
-
 .tc_inner_card > * {
   position: relative;
 }
-
 .tc_entrance.tc_next {
   right: -100px;
   opacity: 0;
 }
-
 .tc_entrance.tc_prev {
   left: -100px;
   opacity: 0;
 }
-
 .tc_next, .tc_prev {
   position: fixed;
   background: white;
@@ -263,18 +258,16 @@ body .tc_back {
   top: 50%;
   margin-top: -24px;
   opacity: 1;
-  z-index: 105;
+  z-index: 905;
   -webkit-transition: all 500ms cubic-bezier(0.1, 0.1, 0.41, 0.99);
   -moz-transition: all 500ms cubic-bezier(0.1, 0.1, 0.41, 0.99);
   -o-transition: all 500ms cubic-bezier(0.1, 0.1, 0.41, 0.99);
   transition: all 500ms cubic-bezier(0.1, 0.1, 0.41, 0.99);
 }
-
 .tc_next {
   right: -24px;
   // text-indent: -16px;
 }
-
 .tc_prev {
   left: -24px;
   text-indent: 16px;
@@ -516,12 +509,11 @@ body .tc_back {
   line-height: 70%;  
   &:hover, &:focus {
     text-decoration: none;
-}
+  }
 }
 .tc_inner_modal {
   margin: 40px;
 }
-
 @media all and (max-width: 960px) {
   body .tc_card {
     width: 50% !important;
