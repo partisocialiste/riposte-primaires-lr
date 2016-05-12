@@ -4,4 +4,4 @@
 
 <hr/>
 
-<p>[Voir l'album de la primaire des Républicains.](http://bit.ly/PrimaireClubFoot)</p>
+[Voir l'album de la primaire des Républicains.](http://bit.ly/PrimaireClubFoot)
