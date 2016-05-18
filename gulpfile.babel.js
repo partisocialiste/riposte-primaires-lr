@@ -60,6 +60,16 @@ gulp.task('html', ['styles', 'scripts'], () => {
     .pipe(gulp.dest('dist'));
 });
 
+// Views task
+gulp.task('views', function() {
+
+
+  // Any other view files from app/views
+  gulp.src('app/views/**/*')
+  // Will be put in the dist/views folder
+  .pipe(gulp.dest('dist/views/'));
+});
+
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe($.if($.if.isFile, $.cache($.imagemin({
@@ -94,7 +104,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['styles', 'scripts', 'fonts', 'views'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -105,6 +115,10 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
       }
     }
   });
+
+  gulp.watch(['app/**/*.html'], [
+    'views'
+  ]);
 
   gulp.watch([
     'app/*.html',
@@ -165,7 +179,7 @@ gulp.task('wiredep', () => {
 });
 
 //gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'fonts', 'extras', 'views'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
