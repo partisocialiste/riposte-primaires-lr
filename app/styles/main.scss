@@ -43,6 +43,13 @@ body, html {
   background-color: $lr;
 }
 
+::selection {
+  background: $red; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $red; /* Gecko Browsers */
+}
+
 /* Template */
 .alert-ie {
   background-color: #e20040;
@@ -60,6 +67,9 @@ body, html {
     }
   }
 }
+.mobile {
+    display: none;
+  }
 .hero {
     background-color: $lr;
     background-image: url('../images/bg-hero.jpg');
@@ -315,8 +325,35 @@ body, html {
         position: relative;
         display: inline-block;
         color: white!important;
+        border: 1px solid white;
+        margin-bottom: 10px;
+
+        -webkit-transition: all 0.25s ease-in-out 0s;
+        -o-transition: all 0.25s ease-in-out 0s;
+        transition: all 0.25s ease-in-out 0s;
         i {
           color: white;  
+        }
+        &:hover {
+          background: $red;
+        }
+      }
+      button {
+        color: white;
+        font-size: 1.25em;
+        line-height: 25px;
+        font-weight: 300;
+        
+        border: 1px solid white;
+        padding: 10px 14px;
+        
+        background: transparent;
+
+        -webkit-transition: all 0.25s ease-in-out 0s;
+        -o-transition: all 0.25s ease-in-out 0s;
+        transition: all 0.25s ease-in-out 0s;
+        &:hover {
+          background: $red;
         }
       }
     }
@@ -329,7 +366,7 @@ body, html {
     h2 {
      @include rem2px(font-size, 1.9);
      color: $lr;
-     margin-bottom: 0;
+     margin: 0;
     }
   }
   .more-thumbnails {
@@ -383,7 +420,6 @@ body, html {
         a {
           padding: 0;
           display: inline-block;
-
           -webkit-transition: all 0.25s ease-in-out 0s;
           -o-transition: all 0.25s ease-in-out 0s;
           transition: all 0.25s ease-in-out 0s;
@@ -393,7 +429,10 @@ body, html {
         }
       }
     }
-  }  
+  }
+}
+.modal {
+  padding-top: 60px;
 }
 .modal-backdrop {
   background-color: rgba(54,149,255,1);
@@ -412,6 +451,34 @@ body, html {
   background-color: transparent;
   border: none;
   box-shadow: none;
+}
+.close-modal  {
+  background-color: transparent;
+  padding: 8px 19px;
+  border: 1px solid white;
+  color: white;
+  font-weight: 600;
+  @include rem2px(font-size, 2.6);
+
+  margin-bottom: 60px;
+
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+  &:hover {
+    background-color: white;
+    color: $red;
+  }
+}
+.modal-text {
+  background-color: white;
+  padding: 20px;
+  h2 {
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
 }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 992px) {

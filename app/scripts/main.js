@@ -34,3 +34,14 @@ $bouton.addEventListener('click', function() {
    // j'appelle la fonction fullscreen sur le <html>
    fullscreen(document.documentElement);
 });
+
+
+var $window = $(window),
+    $html = $('.overlay-content');
+
+$window.resize(function resize() {
+    if ($window.width() < 992) {
+        return $html.addClass('btn-mobile');
+    }
+    $html.removeClass('btn-mobile');
+}).trigger('resize');

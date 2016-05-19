@@ -135,24 +135,21 @@
               <ul class="tips">
               
                 <li class="col-md-3">
+                  
                   <div class="img-item">
                     <img src="images/fillon.jpg" class="img-responsive" alt="François Fillon" />
                   </div>
-
                   <div class="overlay-content">
                     <div class="overlay">
                       <div class="overlay-item">
-                        
                           <a href="#tip1" title="En savoir plus">
                             <i class="fa fa-commenting-o" aria-hidden="true"></i>
                             Schéma de jeu
                           </a>
-                        
-                          <a href="views/francois-fillion.html" data-toggle="modal" data-target="#signature-programme" title="En savoir plus">
+                          <button href="views/francois-fillion.html" data-toggle="modal" data-target="#signature-programme" title="En savoir plus">
                             <i class="fa fa-area-chart" aria-hidden="true"></i>
                             Voir ses perfs
-                          </a>
-                        
+                          </button>
                       </div>
                     </div>
                   </div>
@@ -959,8 +956,14 @@
     </div><!-- /fullpage -->
     <!-- Modal Fillon -->  
     <div class="modal fade" id="signature-programme" tabindex="-1" role="dialog" aria-labelledby="signature-programmeLabel" aria-hidden="true">  
-      <button type="button" class="close-modal text-center" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <div class="modal-content"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <button type="button" class="close-modal text-center" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>   
+        </div>
+        <div class="modal-content"></div>
+      </div>
     </div>
     <!-- /.Modal Fillon -->
     <script>
